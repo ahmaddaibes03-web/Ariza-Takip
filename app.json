@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Arıza Takip",
+    "slug": "ariza-takip",
+    "scheme": "arizatakip58",
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}

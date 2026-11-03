@@ -1,32 +1,89 @@
-# 01-Ariza-Takip — Expo SDK 58
+# Arıza Takip Uygulaması
 
-React Native + Expo Router + JavaScript (JSX).
+## Proje Hakkında
 
-## Çalıştırma
+Bu proje, Mobil Programlama dersi kapsamında React Native ve Expo Router kullanılarak geliştirilmiş bir mobil uygulamadır.
 
-Node.js 22.13+ gerekir.
+Uygulamanın amacı, teknik destek taleplerini listelemek, arıza durumlarını görüntülemek ve seçilen arızanın detaylarına ulaşabilmektir.
+
+## Kullanılan Teknolojiler
+
+- React Native
+- Expo SDK 58
+- Expo Router
+- JavaScript (JSX)
+
+## Uygulama Özellikleri
+
+- Ana sayfadan Arıza Listesi ekranına geçiş
+- En az 3 arıza kaydının listelenmesi
+- TicketCard bileşeni ile arıza kartlarının oluşturulması
+- Arıza ID'sine göre detay sayfasına geçiş
+- Arıza başlığı, konum ve durum bilgilerinin görüntülenmesi
+- StatusBadge bileşeni ile arıza durumlarının farklı renklerde gösterilmesi
+  - Bekliyor: Turuncu
+  - İşlemde: Mavi
+  - Çözüldü: Yeşil
+- Yeni Arıza ekranına geçiş
+- Geri butonu ile önceki ekrana dönüş
+- Geçersiz arıza ID'si için uyarı mesajı
+
+## Kullanılan React Native Bileşenleri
+
+- View
+- Text
+- Pressable
+- FlatList
+- TextInput
+- StyleSheet
+
+## Navigasyon
+
+Uygulamada Expo Router kullanılmıştır.
+
+- `/` : Ana Sayfa
+- `/ariza` : Arıza Listesi
+- `/ariza/[id]` : Arıza Detay Sayfası
+- Yeni Arıza ekranı
+
+Dinamik rota için `useLocalSearchParams` kullanılmıştır.
+
+## Projenin Çalıştırılması
+
+Öncelikle gerekli paketleri yükleyin:
 
 ```bash
 npm install
-npx expo install --fix
-npx expo-doctor
-npx expo start -c
 ```
 
-Bu proje Expo SDK 58 için ayrı olarak düzenlenmiştir. SDK 54 node_modules ve package-lock.json dosyalarını bu klasöre taşımayın.
-
-Doktor föyündeki ekranları, tekrar kullanılabilir bileşenleri ve dinamik rotaları içerir. Test ekran görüntülerini kendi cihazınızda alın; TEST_RAPORU.md dosyasını gerçek sonuçlarla doldurun.
-
-## GitHub
-GitHub'da boş bir depo oluşturun (README / .gitignore eklemeyin), sonra:
+Ardından uygulamayı başlatın:
 
 ```bash
-git init
-git add .
-git commit -m "Expo SDK 58 uygulamasi"
-git branch -M main
-git remote add origin https://github.com/ahmaddaibes03-web/01-Ariza-Takip.git
-git push -u origin main
+npx expo start
 ```
 
-Expo SDK 58 ve React 19.3.0 sürümleri kullanılır.
+Uygulama, Expo Go üzerinden QR kod okutularak çalıştırılabilir.
+
+## Testler
+
+Uygulama çalıştırıldıktan sonra aşağıdaki işlemler kontrol edilmelidir:
+
+- Ana sayfadan arıza listesine geçiş
+- Arıza kayıtlarının doğru görüntülenmesi
+- 101 numaralı arızanın detaylarını açma
+- Detay ekranından listeye geri dönme
+- Geçersiz arıza ID'si için uyarı gösterilmesi
+- Arıza durumlarına göre renklerin doğru gösterilmesi
+- Yeni Arıza ekranının açılması
+
+## Ekran Görüntüleri
+
+Uygulama test edildikten sonra ekran görüntüleri bu bölüme eklenecektir.
+
+## Yapay Zekâ Kullanımı
+
+Bu projede yapay zekâdan React Native bileşenleri, Expo Router navigasyonu ve kodların düzenlenmesi konusunda destek alınmıştır. Ayrıca hata mesajlarının anlaşılması ve SDK sürüm uyumluluğu hakkında yardım alınmıştır.
+
+## Geliştirme Önerisi
+
+Gelecekte uygulamaya arıza kayıtlarını kalıcı olarak saklama ve arıza durumlarını güncelleme özellikleri eklenebilir.
